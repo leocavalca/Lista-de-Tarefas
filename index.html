@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Próprio -->
+    <link rel="stylesheet" href="styles\styles.css"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Fontawesome Icons-->
+    <script src="https://kit.fontawesome.com/e252e9b519.js" crossorigin="anonymous"></script>
+    <!--Script local-->
+    <script src="scripts/scripts.js" defer></script>
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <header>
+    <div class="container-fluid text-center" id="top_bar">
+        <div class="row" id="top_line">
+            <div class="col">Lista de Tarefas <i class="fa-solid fa-list-check" id="task_icon"></i></div>
+        </div>
+    </div>
+    </header>
+    <div class="container text-center mh-100 mw-100" id="main_task_container">
+        <div class="row d-flex align-items-center justify-content-center h-50" id="linha_tasks">
+          <div class="col-sm">
+          </div>
+          <div class="col-8 col-md-8 col-xl-6 col-lg-8">
+            <div class="card" id="card_container_tasks">
+              <!--Config titulo das abas e target delas-->
+                <nav class="nav_card">
+                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-afazer" type="button" role="tab" aria-controls="nav-afazer" aria-selected="true">A Fazer</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-feitas" type="button" role="tab" aria-controls="nav-feitas" aria-selected="false">Executadas</button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-canceladas" type="button" role="tab" aria-controls="nav-canceladas" aria-selected="false">Canceladas</button>
+                 </div>
+                </nav><br>
+                <!--Conteúdo das abas-->
+              <div class="tab-content" id="nav-tabContent">
+                <!-- Aba A Fazer-->
+                <div class="tab-pane fade show active" id="nav-afazer" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col"></div>
+                      <div class="col-6">
+                        <div class="input-group mb-3 tasklist_control">
+                          <input type="text" class="form-control new_task_input" id="new_task_input" placeholder="Tarefa..." aria-label="Tarefa" aria-describedby="button-addon2">
+                          <button class="btn btn-outline-secondary" id="new_task_btn" type="button">Adicionar</button>
+                        </div>
+                      </div>
+                    <div class="col"></div>
+                  </div>
+                  <div class="row task-container">
+                    <div class="tasks-container-list col-8"><div class="row list-item-row"></div></div>
+                    <div class="task-confirm-container col-2"><div class="row confirm-item-row"></div></div>
+                    <div class="task-delete-container col-2"><div class="row delete-item-row"></div></div>
+                  </div>
+                </div>
+                <!-- Aba Feitas-->
+                <div class="tab-pane fade" id="nav-feitas" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                  <div class="row done-tasks"></div>
+                </div>
+                <!-- Aba Canceladas-->
+                <div class="tab-pane fade" id="nav-canceladas" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                  <div class="row canceled-tasks">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+          </div>
+        </div>
+    </div>
+    
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--Todolist-->

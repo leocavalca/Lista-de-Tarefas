@@ -1,0 +1,67 @@
+/*Body style*/
+body{
+    background-color: #f6fafd;
+    margin: 0;
+    padding: 0;
+}
+/* Header Style */
+#top_line{
+font-size: xx-large;
+background-color: #b0f8f8;
+}
+
+
+/* Task grid style */
+#main_task_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+#card_container_tasks{
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+/*Task list style*/
+.task-item{
+    display:grid;
+    justify-content:left;
+    overflow-wrap:break-word;
+    margin-left: 5%;
+    padding: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    margin-right: 0%;
+}
+
+.confirm-item-row, .delete-item-row {
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.confirm-item-row button, .delete-item-row button {
+
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+}
+
+.confirm-icon, .delete-icon {
+    background: none;
+    border: none;
+}
+
+.confirm-icon:hover, .delete-icon:hover {
+    color: #b0f8f8;
+}
+
+
+/*Utilitários*/
+.error{
+    border: 0.5px solid red !important;
+}
+
+.error::placeholder{
+    color: red !important;
+}
